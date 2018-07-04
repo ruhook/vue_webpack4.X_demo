@@ -2,7 +2,7 @@
 
 > A webpack 配置demo
 
-## Build Setup123123123123
+## Build Setup
 
 ``` bash
 # install dependencies
