@@ -1,6 +1,6 @@
 #
 
-> A webpack 配置demo
+> webpack配置 demo
 
 ## Build Setup
 
