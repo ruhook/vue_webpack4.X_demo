@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const webpack = require('webpack');
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `./src/index.html`
     }),
+    new VueLoaderPlugin()
     // new config.optimization.splitChunks({
     //   name: 'common' // 指定公共 bundle 的名称。
     // })
@@ -21,6 +23,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        //解析vue后缀文件
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
       {
         //html加载
         test: /\.html$/,
